@@ -13,7 +13,11 @@
 
 Route::get('/', 'PagesController@inicio');
 
+Route::resource('users', 'UsuariosController');
+
 Route::get('FormularioController');
+
+Route::post('confirmacion', 'PagesController@confirmacion');
 
 Route::get('confirmacion', 'PagesController@confirmacion');
 

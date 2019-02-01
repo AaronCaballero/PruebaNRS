@@ -26,27 +26,27 @@
 	<h4 class="card-title mt-3 text-center">Recogida de datos</h4>
 	<p class="text-center">Introduce los datos para realizar el registro</p>
 	
-	<form>
-
+	<form class="form-group" method="POST" action="/confirmacion">
+		@csrf
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Usuario" type="text" required="">
+        <input name="usuario" class="form-control" placeholder="Usuario" type="text" required="">
     </div> <!-- form-group// -->
 
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Nombre" type="text" required="">
+        <input name="nombre" class="form-control" placeholder="Nombre" type="text" required="">
     </div> <!-- form-group// -->
 
     <div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Apellidos" type="text" required="">
+        <input name="apellidos" class="form-control" placeholder="Apellidos" type="text" required="">
     </div> <!-- form-group// -->
 
     <div class="form-group input-group">
@@ -59,35 +59,25 @@
 		    <option value="2">+35</option>
 		    <option value="3">+36</option>
 		</select>
-    	<input name="" class="form-control" placeholder="Nº de teléfono" type="text" required="">
+    	<input name="telefono" class="form-control" placeholder="Nº de teléfono" type="text" required="">
     </div> <!-- form-group// -->
 
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Dirección Email" type="email" required="">
+        <input name="email" class="form-control" placeholder="Dirección Email" type="email" required="">
     </div> <!-- form-group// -->
     
     <div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Fecha actual " type="date" required="">
+        <input name="fecha" class="form-control" placeholder="Fecha actual " type="date" required="">
 	</div> <!-- form-group end.// -->
-    
-    <!------
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input class="form-control" placeholder="Contraseña" type="password">
-    </div> 
-    ---------->
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Registrarse  
-        </button> 		
+        <button type="submit" class="btn btn-primary btn-block"> Registrarse </button> 		
     </div> <!-- form-group// -->      
                                                                     
 </form>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
@@ -13,7 +14,7 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        return 'Hola desde resource';
     }
 
     /**
@@ -23,7 +24,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        //
+        return view('/usuarios/create')
     }
 
     /**
@@ -34,7 +35,10 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->nombre = $request->input('nombre');
+        $user->save();
+        return 'Saved';
     }
 
     /**
